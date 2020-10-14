@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import MarkdownRender from "./MarkdownRender"
 
-function App() {
+function App(props) {
+  const source= `Lift($L$) can be determined by Lift Coefficient ($C_L$) like the following
+  equation.
+  
+  $$
+  L = \frac{1}{2} \rho v^2 S C_L
+  $$`
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MarkdownRender source={source}></MarkdownRender>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
