@@ -1,8 +1,6 @@
 import React from 'react'
 import "./App.css"
 import MarkdownRender from "./MarkdownRender"
-// enable everything
-var md = require('markdown-it')();
 
 function App(props) {
   const source= `Lift($L$) can be determined by Lift Coefficient ($C_L$) like the following
@@ -51,8 +49,7 @@ Read usage information and more on [GitHub](https://github.com/remarkjs/react-ma
 ---------------
 
 A component by [Espen Hovlandsdal](https://espen.codes/)
-`
-  var result = md.render(source);
+`;
 
   return (
     // <div className="markdown-body">
